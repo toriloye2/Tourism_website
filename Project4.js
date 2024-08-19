@@ -6,8 +6,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const navLinks = document.querySelector(".mobile-menu");
 
     menuBtn.addEventListener("click", () => {
-        navLinks.classList.toggle("mobile-menu"); // Toggling the .mobile-menu class
-    });
+        navLinks.classList.toggle("show");
+    })
     const form = document.querySelector("form");
     const nameInput = document.getElementById("name");
     const emailInput = document.getElementById("email");
