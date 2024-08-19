@@ -247,14 +247,14 @@ p{
         color: whitesmoke;
 
     }
-    .nav-links{
+    .nav-links {
+        display: none; /* Hidden by default */
         flex-direction: column;
         width: 100%;
         height: 100vh;
         justify-content: center;
-       background-color: rgb(91, 91, 152) ;
+        background-color: rgb(91, 91, 152) ;
 
-    }
     .nav-links li{
         margin:30px auto ;
      }
@@ -265,7 +265,7 @@ p{
         border-bottom-right-radius: 30%;
     }
     .mobile-menu.show {
-        display: block;
+        display: flex;
     }
     /* events */
     .row{
@@ -455,4 +455,5 @@ li:hover{
 .ctn a:hover {
     background-color: whitesmoke; /* Invert the background color on hover */
     color: crimson; /* Keep the text crimson */
+}
 }

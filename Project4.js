@@ -1,13 +1,13 @@
 
 
-   
+
 document.addEventListener("DOMContentLoaded", function() {
     const menuBtn = document.querySelector(".menu-btn");
     const navLinks = document.querySelector(".mobile-menu");
 
     menuBtn.addEventListener("click", () => {
-        navLinks.classList.toggle("show");
-    })
+        navLinks.classList.toggle("mobile-menu"); // Toggling the .mobile-menu class
+    });
     const form = document.querySelector("form");
     const nameInput = document.getElementById("name");
     const emailInput = document.getElementById("email");
@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-    
+
 });
 
 
@@ -145,7 +145,7 @@ document.addEventListener("DOMContentLoaded", function() {
 // // }
 
 // document.addEventListener("DOMContentLoaded", () => {
-   
+
 
         // console.log("Script is running!");
 
@@ -154,12 +154,12 @@ document.addEventListener("DOMContentLoaded", function() {
         // } else {
         //     menuBtn.textContent = "Close Menu";
         // }
-    
+
 
 // function myFunction() {
 //     document.getElementById("myDropdown").classList.toggle("show");
 //   }
-  
+
 //   // Close the dropdown if the user clicks outside of it
 //   window.onclick = function(event) {
 //     if (!event.target.matches('.dropbtn')) {
@@ -173,4 +173,3 @@ document.addEventListener("DOMContentLoaded", function() {
 //       }
 //     }
 //   }
-  
