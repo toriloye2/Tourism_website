@@ -9,65 +9,90 @@
     font-family: 'Poppins', sans-serif;
 }
 
-.logo {
-    color: crimson;
-}
-
-a {
-    text-decoration: none;
-    color: whitesmoke;
-}
-
-li {
-    list-style: none;
-}
-
-.navbar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    padding: 20px;
-    color: whitesmoke;
-}
-
-/* Navigation Links */
-.nav-links {
-    display: flex;
-    align-items: center;
-    transition: all 0.3s ease;
-}
-
-.nav-links li {
-    margin: 0 30px;
-}
-
-/* Show nav-links when the 'show' class is added (for mobile) */
-.nav-links.show {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 70px;
-    right: 0;
-    background-color: rgb(91, 91, 152);
-    width: 100%;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-}
-
-.active {
-    color: crimson;
-    text-decoration: underline;
-    font-weight: bold;
-}
-
 body, html {
     overflow-x: hidden;
 }
 
+.logo {
+    color: crimson;
+}
+
+/* Navbar styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: rgba(255, 0, 0, 0);
+    color: whitesmoke;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin: 0 20px;
+}
+
+.nav-links a {
+    color:whitesmoke;
+    text-decoration: none;
+    padding: 10px 15px;
+    border: 2px solid whitesmoke;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.nav-links a:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+.active {
+    color: crimson;
+    /* text-decoration: underline; */
+    font-weight: bold;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 60px;
+    right: 0;
+    background-color: rgba(40, 8, 8, 0);
+    width: 100%;
+    padding: 20px;
+    z-index: 999;
+}
+
+.mobile-menu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.mobile-menu ul li a {
+    color: rgb(14, 11, 11);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.menu-btn {
+    display: none; /* Hidden on desktop */
+    cursor: pointer;
+    font-size: 24px;
+    color: rgba(30, 5, 5, 0.922);
+}
+
+/* Header styles */
 header {
     width: 100vw;
     height: 100vh;
@@ -117,17 +142,7 @@ header {
     box-shadow: 2px 2px 5px;
 }
 
-.menu-btn {
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    width: 40px;
-    cursor: pointer;
-    margin-top: -9px;
-    display: none;
-}
-
-/* Events */
+/* Events Section */
 section {
     width: 80%;
     margin: 80px auto;
@@ -175,6 +190,7 @@ p {
     margin-top: 30px;
 }
 
+/* Explore Section */
 .explore {
     width: 100%;
     height: 80vh;
@@ -211,6 +227,7 @@ p {
     margin: 40px;
 }
 
+/* Tours Section */
 .content-col {
     width: 40%;
 }
@@ -246,6 +263,7 @@ p {
     margin: 30px auto;
 }
 
+/* Footer styles */
 .footer {
     width: 100%;
     min-height: 200px;
@@ -261,36 +279,29 @@ p {
     padding: 20px;
 }
 
-/* Mobile Menu */
-.nav-links {
-    display: none; /* Hidden by default for mobile */
+/* Image Hover Animation */
+img {
+    transition: transform 0.3s ease;
 }
 
-/* Show nav-links when the 'show' class is added */
-.nav-links.show {
-    display: flex;
+img:hover {
+    transform: scale(1.1);
 }
 
-/* Mobile-specific styling */
+/* Media Query for Mobile */
 @media screen and (max-width: 850px) {
-    .menu-btn {
-        display: block;
-    }
-
     .nav-links {
-        flex-direction: column;
-        width: 100%;
-        height: 100vh;
-        justify-content: center;
-        align-items: center;
-        background-color: rgb(91, 91, 152);
+        display: none; /* Hide desktop nav links on mobile */
     }
 
-    .nav-links li {
-        margin: 30px auto;
+    .menu-btn {
+        display: block; /* Show the menu button on mobile */
     }
 
-    /* events */
+    .mobile-menu.show {
+        display: block; /* Show the mobile menu when toggled */
+    }
+
     .row {
         flex-direction: column;
     }
@@ -299,12 +310,7 @@ p {
         max-width: 90%;
     }
 
-    /* explore */
     .explore-content {
-        width: 100%;
-    }
-
-    .tours.col {
         width: 100%;
     }
 
@@ -320,20 +326,6 @@ p {
     .footer {
         padding: 10px;
     }
-}
-
-/* Animate */
-img {
-    transition: transform 0.3s ease;
-}
-
-img:hover {
-    transform: scale(1.1);
-}
-
-li:hover {
-    color: crimson;
-    cursor: zoom-out;
 }
 
 /* Contact Form Styles */
@@ -436,32 +428,3 @@ li:hover {
     border-radius: 5px;
 }
 
-/* Explore Destination */
-.explore-destination img {
-    width: 400px;
-    height: 300px;
-}
-
-/* Navigation Links Hover Effect */
-.nav-links a {
-    padding: 10px 15px;
-    border: 2px solid whitesmoke;
-    border-radius: 5px;
-    background-color: rgba(0, 0, 0, 0.3);
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.nav-links a:hover {
-    background-color: whitesmoke;
-    color: crimson;
-}
-
-.ctn a {
-    background-color: crimson;
-    border-color: crimson;
-}
-
-.ctn a:hover {
-    background-color: whitesmoke;
-    color: crimson;
-}

@@ -1,17 +1,18 @@
 document.addEventListener("DOMContentLoaded", function() {
+    // Select the menu button and the mobile menu
     const menuBtn = document.querySelector(".menu-btn");
-    const navLinks = document.querySelector(".nav-links");
+    const mobileMenu = document.querySelector(".mobile-menu");
 
-    // Toggle mobile menu visibility
+    // Toggle the mobile menu visibility when the menu button is clicked
     menuBtn.addEventListener("click", () => {
-        navLinks.classList.toggle("show");
+        mobileMenu.classList.toggle("show");
     });
 
-    // Optional: Close the menu when a link is clicked
-    const links = navLinks.querySelectorAll("a");
-    links.forEach(link => {
+    // Optional: Close the mobile menu when a link is clicked
+    const mobileLinks = mobileMenu.querySelectorAll("a");
+    mobileLinks.forEach(link => {
         link.addEventListener("click", () => {
-            navLinks.classList.remove("show");
+            mobileMenu.classList.remove("show");
         });
     });
 });
