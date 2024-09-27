@@ -1,13 +1,23 @@
-
-
-
 document.addEventListener("DOMContentLoaded", function() {
     const menuBtn = document.querySelector(".menu-btn");
-    const navLinks = document.querySelector(".mobile-menu");
+    const navLinks = document.querySelector(".nav-links");
 
+    // Toggle mobile menu visibility
     menuBtn.addEventListener("click", () => {
         navLinks.classList.toggle("show");
-    })
+    });
+
+    // Optional: Close the menu when a link is clicked
+    const links = navLinks.querySelectorAll("a");
+    links.forEach(link => {
+        link.addEventListener("click", () => {
+            navLinks.classList.remove("show");
+        });
+    });
+});
+
+
+    // Contact Form Validation
     const form = document.querySelector("form");
     const nameInput = document.getElementById("name");
     const emailInput = document.getElementById("email");
@@ -63,6 +73,7 @@ document.addEventListener("DOMContentLoaded", function() {
         return emailRegex.test(email);
     }
 
+    // Book Tour Form Validation
     const bookTourForm = document.querySelector(".book-tour-form form");
     const tourNameInput = document.getElementById("tour-name");
     const tourDateInput = document.getElementById("tour-date");
@@ -110,66 +121,4 @@ document.addEventListener("DOMContentLoaded", function() {
         const formControl = input.parentElement;
         formControl.classList.remove("error");
     }
-
-
-
-
-});
-
-
-// bookTourForm.addEventListener("submit", function(event) {
-//     // ... (existing form validation code) ...
-
-//     if (isValid) {
-//         showThankYouMessage();
-//         event.preventDefault(); // Prevent default form submission
-//     }
-// });
-
-// function showThankYouMessage() {
-//     const thankYouSection = document.querySelector(".thank-you");
-//     thankYouSection.style.display = "block";
-// }
-
-
-// // document.addEventListener("DOMContentLoaded", load);
-
-// // function load() {
-// //     const menuBtn = document.querySelector(".menu-btn");
-// //     const navLinks = document.querySelector(".nav-links");
-
-// //     menuBtn.addEventListener("click",()=> {
-// //         navLinks.classList.toggle("mobile-menu"); // Toggle the mobile-menu class
-// //     });
-
-// // }
-
-// document.addEventListener("DOMContentLoaded", () => {
-
-
-        // console.log("Script is running!");
-
-        // if (navLinks.classList.contains("mobile-menu")) {
-        //     menuBtn.textContent = "Menu";
-        // } else {
-        //     menuBtn.textContent = "Close Menu";
-        // }
-
-
-// function myFunction() {
-//     document.getElementById("myDropdown").classList.toggle("show");
-//   }
-
-//   // Close the dropdown if the user clicks outside of it
-//   window.onclick = function(event) {
-//     if (!event.target.matches('.dropbtn')) {
-//       var dropdowns = document.getElementsByClassName("dropdown-content");
-//       var i;
-//       for (i = 0; i < dropdowns.length; i++) {
-//         var openDropdown = dropdowns[i];
-//         if (openDropdown.classList.contains('show')) {
-//           openDropdown.classList.remove('show');
-//         }
-//       }
-//     }
-//   }
+;

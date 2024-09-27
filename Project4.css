@@ -1,4 +1,4 @@
-  /* Import Google Fonts */
+/* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap');
 
 /* Global styles */
@@ -7,19 +7,22 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-
 }
-.logo{
+
+.logo {
     color: crimson;
 }
 
-a{
+a {
     text-decoration: none;
+    color: whitesmoke;
 }
-li{
+
+li {
     list-style: none;
 }
-.navbar{
+
+.navbar {
     position: absolute;
     top: 0;
     left: 0;
@@ -29,27 +32,43 @@ li{
     padding: 20px;
     color: whitesmoke;
 }
-.nav-links{
+
+/* Navigation Links */
+.nav-links {
     display: flex;
     align-items: center;
+    transition: all 0.3s ease;
 }
 
-.nav-links li{
+.nav-links li {
     margin: 0 30px;
 }
 
-.active{
+/* Show nav-links when the 'show' class is added (for mobile) */
+.nav-links.show {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: rgb(91, 91, 152);
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.active {
     color: crimson;
     text-decoration: underline;
     font-weight: bold;
-    text-decoration: none;
- }
-body , html{
-    overflow-x: hidden;
-
 }
 
-header{
+body, html {
+    overflow-x: hidden;
+}
+
+header {
     width: 100vw;
     height: 100vh;
     background-image: url(images/waterfall.jpg);
@@ -59,277 +78,265 @@ header{
     align-items: flex-end;
     justify-content: center;
 }
-.header-content{
+
+.header-content {
     margin-bottom: 150px;
     color: whitesmoke;
     text-align: center;
-
 }
-.header-content h2{
+
+.header-content h2 {
     font-size: 4vmin;
-
 }
-.line{
+
+.line {
     width: 150px;
     height: 4px;
-    background:crimson ;
+    background: crimson;
     margin: 10px auto;
     border-radius: 5px;
-
 }
-.header-content h1{
+
+.header-content h1 {
     font-size: 7vmin;
     margin-top: 50px;
     margin-bottom: 30px;
-
-
 }
-.ctn{
-    /* padding-left: 8px 15px; */
+
+.ctn {
     background: crimson;
     border-radius: 10px;
     color: whitesmoke;
-
-
+    padding: 10px 20px;
+    transition: all 0.3s ease;
 }
-.menu-btn{
+
+.ctn:hover {
+    background: whitesmoke;
+    color: crimson;
+    box-shadow: 2px 2px 5px;
+}
+
+.menu-btn {
     position: absolute;
-    top: 30px ;
+    top: 30px;
     right: 30px;
     width: 40px;
     cursor: pointer;
     margin-top: -9px;
     display: none;
 }
+
 /* Events */
-section{
+section {
     width: 80%;
     margin: 80px auto;
 }
-.title{
+
+.title {
     text-align: center;
     font-size: 4vmin;
-    color: rgb(91, 91, 152) ;
+    color: rgb(91, 91, 152);
 }
-.row{
+
+.row {
     display: flex;
     align-items: center;
     width: 100%;
     justify-content: space-between;
 }
- .col img{
-  width:500px;
-  height: 300px;
-  /* padding-left: %; */
 
-
+.col img {
+    width: 500px;
+    height: 300px;
 }
-.row.col{
+
+.row.col {
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
-.events.row{
-    margin-top:50px;
 
-
+.events.row {
+    margin-top: 50px;
 }
-h4{
+
+h4 {
     font-size: 3vmin;
     color: rgb(91, 91, 152);
     margin: 20px auto;
-    /* text-align: center; */
 }
-p{
-    color:rgb(45, 44, 44);
-    /* padding: 0px 40px; */
-    /* padding-left: 20%; */
-}
-.events.ctn{
-    margin-top: 30px;
 
+p {
+    color: rgb(45, 44, 44);
 }
-.explore{
+
+.events.ctn {
+    margin-top: 30px;
+}
+
+.explore {
     width: 100%;
     height: 80vh;
     background-image: url(images/m=nature.jpg);
-    background-position:center;
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
-
 }
-.explore-content{
+
+.explore-content {
     width: 50%;
     padding: 50px;
-    color:whitesmoke;
+    color: whitesmoke;
     display: flex;
     align-items: center;
     flex-direction: column;
-
 }
-.explore-content h1{
+
+.explore-content h1 {
     font-size: 7vmin;
-
 }
+
 .explore-content.line {
     margin-bottom: 50px;
 }
-.explore-content p{
+
+.explore-content p {
     color: whitesmoke;
 }
-.explore-content.ctn{
+
+.explore-content.ctn {
     margin: 40px;
 }
 
-.content-col{
+.content-col {
     width: 40%;
 }
-.image-col{
+
+.image-col {
     width: 60%;
 }
-.tours.image-gallery{
+
+.tours.image-gallery {
     display: flex;
-    flex-wrap:wrap ;
+    flex-wrap: wrap;
     width: 100%;
     align-items: center;
+}
 
-}
-.image-gallery img{
-    width:300px;
+.image-gallery img {
+    width: 300px;
     height: 200px;
-    margin:5px;
+    margin: 5px;
 }
+
 .content-col h1 {
     font-size: 7vmin;
-    color: rgb(91, 91, 152) ;
-
+    color: rgb(91, 91, 152);
 }
-.content-col line{
+
+.content-col line {
     margin-left: -1px;
+}
 
-}
-.content-col p{
+.content-col p {
     padding: 0;
-    margin:30px auto;
+    margin: 30px auto;
 }
-.ctn{
-    padding-left:  20px;
-    padding-right: 20px;
-}
-.footer{
+
+.footer {
     width: 100%;
     min-height: 200px;
     padding: 20px 80px;
     margin: 0;
-    background-color:rgb(91, 91, 152) ;
+    background-color: rgb(91, 91, 152);
     text-align: center;
 }
-.footer p{
+
+.footer p {
     color: whitesmoke;
     margin: 20px auto;
-    padding: 20px ;
+    padding: 20px;
 }
-/*mobile device*/
-@media screen and (max-width: 850px){
-    .menu-btn{
+
+/* Mobile Menu */
+.nav-links {
+    display: none; /* Hidden by default for mobile */
+}
+
+/* Show nav-links when the 'show' class is added */
+.nav-links.show {
+    display: flex;
+}
+
+/* Mobile-specific styling */
+@media screen and (max-width: 850px) {
+    .menu-btn {
         display: block;
     }
-    .navbar{
-       padding: 0;
-        }
-    .logo{
-        position: absolute;
-        top: px;
-        left: 30px;
-        color: whitesmoke;
 
-    }
-    .nav-links{
+    .nav-links {
         flex-direction: column;
         width: 100%;
         height: 100vh;
         justify-content: center;
-       background-color: rgb(91, 91, 152) ;
+        align-items: center;
+        background-color: rgb(91, 91, 152);
+    }
 
+    .nav-links li {
+        margin: 30px auto;
     }
-    .nav-links li{
-        margin:30px auto ;
-     }
-     .mobile-menu{
-        margin-top: 0px;
-        display: none;
-        text-align: center;
-        border-bottom-right-radius: 30%;
-    }
-    .mobile-menu.show {
-        display: block;
-    }
+
     /* events */
-    .row{
-        flex-direction:column;
-
-
+    .row {
+        flex-direction: column;
     }
-    .row.col{
-        margin: 20px auto;
-    }
-    .col img{
+
+    .col img {
         max-width: 90%;
     }
+
     /* explore */
-    .explore-content{
+    .explore-content {
         width: 100%;
     }
-    .tours.col{
+
+    .tours.col {
         width: 100%;
     }
-    .image-gallery{
+
+    .image-gallery {
         justify-content: center;
         align-items: center;
     }
-    .image-gallery img{
+
+    .image-gallery img {
         width: 90%;
     }
-    .footer{
+
+    .footer {
         padding: 10px;
     }
-    .tours{
-        width: 100%;
-    }
-
-
- }
-   /* animate */
-   img{
-    transition: transform .3s ease ;
 }
-img:hover{
+
+/* Animate */
+img {
+    transition: transform 0.3s ease;
+}
+
+img:hover {
     transform: scale(1.1);
 }
-.ctn:hover{
-    background: whitesmoke;
-    color: crimson;
-    box-shadow: 2px 2px 5px;
 
-}
-li:hover{
+li:hover {
     color: crimson;
     cursor: zoom-out;
- }
-
-
-.tours{
-    /* background-image: url(images/back1.webp); */
-
 }
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap');
 
-/* ... (your existing CSS styles) ... */
-
+/* Contact Form Styles */
 .contact {
     margin: 80px auto;
     text-align: center;
@@ -390,8 +397,8 @@ li:hover{
 .contact-form button:hover {
     background: #aa1122;
 }
-/* ... (previous CSS styles) ... */
 
+/* Book Tour Form */
 .book-tour {
     margin: 80px auto;
     text-align: center;
@@ -429,30 +436,32 @@ li:hover{
     border-radius: 5px;
 }
 
-.explore-destination img{
+/* Explore Destination */
+.explore-destination img {
     width: 400px;
     height: 300px;
 }
+
+/* Navigation Links Hover Effect */
 .nav-links a {
-    color: whitesmoke; /* Ensure the text color is visible */
-    padding: 10px 15px; /* Add padding inside the box */
-    border: 2px solid whitesmoke; /* Add a border around the links */
-    border-radius: 5px; /* Optional: round the corners of the box */
-    background-color: rgba(0, 0, 0, 0.3); /* Add a semi-transparent background to the links */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Add smooth transition for hover effects */
+    padding: 10px 15px;
+    border: 2px solid whitesmoke;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .nav-links a:hover {
-    background-color: whitesmoke; /* Change background color on hover */
-    color: crimson; /* Change text color on hover */
+    background-color: whitesmoke;
+    color: crimson;
 }
 
 .ctn a {
-    background-color: crimson; /* Give the 'Contact' link a distinct background */
-    border-color: crimson; /* Match the border color */
+    background-color: crimson;
+    border-color: crimson;
 }
 
 .ctn a:hover {
-    background-color: whitesmoke; /* Invert the background color on hover */
-    color: crimson; /* Keep the text crimson */
+    background-color: whitesmoke;
+    color: crimson;
 }
