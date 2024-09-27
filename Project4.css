@@ -432,3 +432,94 @@ img:hover {
     border-radius: 5px;
 }
 
+/* Explore Header Section */
+.explore {
+    width: 100%;
+    height: 80vh; /* Set height for the large background image */
+    background-image: url('images/m=nature.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: whitesmoke;
+}
+
+.explore-content {
+    text-align: center;
+    max-width: 700px;
+}
+
+.explore-content h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.explore-content p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Line Under Header */
+.line {
+    width: 150px;
+    height: 4px;
+    background-color: crimson;
+    margin: 20px auto;
+    border-radius: 5px;
+}
+
+/* Section for Side-by-Side Images */
+.explore-destinations {
+    width: 90%;
+    margin: 80px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns for side-by-side layout */
+    grid-gap: 30px; /* Gap between images */
+}
+
+.explore-destination img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.explore-destination img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Text Beneath Each Image */
+.explore-info {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.explore-info h2 {
+    font-size: 1.8rem;
+    color: #5b5b98;
+    margin-bottom: 10px;
+}
+
+.explore-info p {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+    .explore-destinations {
+        grid-template-columns: 1fr; /* Stack images vertically on smaller screens */
+    }
+
+    .explore-content h1 {
+        font-size: 3rem;
+    }
+
+    .explore-content p {
+        font-size: 1.2rem;
+    }
+}
