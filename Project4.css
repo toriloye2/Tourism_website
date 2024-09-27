@@ -19,7 +19,7 @@ body, html {
 
 /* Navbar styles */
 .navbar {
-    position: fixed;
+    /* position: fixed; */
     top: 0;
     left: 0;
     width: 100%;
@@ -128,19 +128,22 @@ header {
     margin-bottom: 30px;
 }
 
+
 .ctn {
-    background: crimson;
-    border-radius: 10px;
-    color: whitesmoke;
-    padding: 10px 20px;
-    transition: all 0.3s ease;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
-.ctn:hover {
-    background: whitesmoke;
-    color: crimson;
-    box-shadow: 2px 2px 5px;
+.ctn a {
+    background-color: crimson;
+    border-color: crimson;
 }
+
+.ctn a:hover {
+    background-color: whitesmoke;
+    color: crimson;
+}
+
 
 /* Events Section */
 section {
@@ -226,6 +229,7 @@ p {
 .explore-content.ctn {
     margin: 40px;
 }
+
 
 /* Tours Section */
 .content-col {

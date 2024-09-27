@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UNITA TOURS - Explore</title>
     <link rel="stylesheet" href="Project4.css"> <!-- Link to your main CSS file -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> <!-- Link to Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> <!-- Link to Font Awesome for icons -->
 </head>
 <body>
+    <!-- Navigation bar -->
     <nav class="navbar">
         <h1 class="logo"><i class="fas fa-globe"></i> UNITA TOURS</h1>
         <ul class="nav-links">
@@ -17,10 +18,11 @@
             <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
             <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
         </ul>
-        <button class="menu-btn"><i class="fas fa-bars"></i> </button>
+        <button class="menu-btn"><i class="fas fa-bars"></i> </button> <!-- Mobile menu button -->
     </nav>
-     <!-- Mobile Menu -->
-     <div class="mobile-menu">
+
+    <!-- Mobile menu for smaller screens -->
+    <div class="mobile-menu">
         <ul>
             <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
             <li><a href="tours.html"><i class="fas fa-map"></i> Tours</a></li>
@@ -30,36 +32,53 @@
         </ul>
     </div>
 
+    <!-- Explore section -->
     <section class="explore">
         <div class="explore-content">
-            <h1><i class="fas fa-compass"></i> EXPLORE THE WORLD</h1>
+            <h1 class="fas fa-compass" >EXPLORE THE WORLD</h1>
             <div class="line"></div>
-            <p><i class="fas fa-plane"></i> Embarking on journeys, we uncover diverse landscapes, cultures, and histories, expanding horizons, forging connections, and fostering understanding in our shared global tapestry of exploration.</p>
+            <p>Embarking on journeys, we uncover diverse landscapes, cultures, and histories, expanding horizons, forging connections, and fostering understanding in our shared global tapestry of exploration.</p>
             <a href="tours.html" class="ctn"><i class="fas fa-search"></i> Browse Tours</a>
         </div>
     </section>
 
+    <!-- Explore Destinations Section -->
     <section class="explore-destinations">
         <div class="explore-destination">
-            <img src="images/exp1.jpg" alt="Exotic Island Getaway">
+            <img src="images/exp1.jpg" alt="Destination 1">
             <div class="explore-info">
-                <h2><i class="fas fa-umbrella-beach"></i> Exotic Island Getaway</h2>
+                <h2>Exotic Island Getaway</h2>
                 <p>Escape to the pristine shores of an exotic island paradise. Relax on white sandy beaches, swim in crystal-clear waters, and immerse yourself in the local culture and cuisine.</p>
             </div>
         </div>
         <div class="explore-destination">
-            <img src="images/exp1.jpeg" alt="Cultural Exploration">
+            <img src="images/exp3.jpg" alt="Destination 2">
             <div class="explore-info">
-                <h2><i class="fas fa-landmark"></i> Cultural Exploration</h2>
+                <h2>Cultural Exploration</h2>
                 <p>Uncover the rich history and traditions of ancient cities. Explore magnificent temples, bustling markets, and interact with locals to gain insights into their way of life.</p>
             </div>
         </div>
-        <!-- Add more explore destinations as needed -->
+        <div class="explore-destination">
+            <img src="images/exp1.jpeg" alt="Destination 3">
+            <div class="explore-info">
+                <h2>Mountain Adventure</h2>
+                <p>Experience the thrill of a lifetime with a mountain expedition, hiking through challenging terrains and experiencing breathtaking views of nature’s beauty.</p>
+            </div>
+        </div>
+        <div class="explore-destination">
+            <img src="images/exp6.jpg" alt="Destination 4">
+            <div class="explore-info">
+                <h2>Urban Getaway</h2>
+                <p>Discover the bustling life of a modern metropolis. Visit iconic landmarks, sample global cuisine, and immerse yourself in the vibrant atmosphere of the city.</p>
+            </div>
+        </div>
     </section>
 
+    <!-- Footer -->
     <section class="footer">
         <p><i class="fas fa-map-marker-alt"></i> 123 Adventure Lane, Wanderlust City, Exploreland | <i class="fas fa-phone"></i> Phone: 555-123-4567 | <a href="mailto:contact@unitatours.com"><i class="fas fa-envelope"></i> Email: contact@unitatours.com</a></p>
-        <p>&copy; 2023 UNITA TOURS</p>    </section>
+        <p>&copy; 2023 UNITA TOURS</p>
+    </section>
 
     <script src="Project4.js" defer></script> <!-- Link to your JavaScript file -->
 </body>
