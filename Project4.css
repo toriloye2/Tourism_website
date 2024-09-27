@@ -66,7 +66,7 @@ body, html {
     position: fixed;
     top: 60px;
     right: 0;
-    background-color: rgba(40, 8, 8, 0);
+    background-color: whitesmoke;
     width: 100%;
     padding: 20px;
     z-index: 999;
@@ -83,6 +83,7 @@ body, html {
     color: rgb(14, 11, 11);
     text-decoration: none;
     font-size: 18px;
+
 }
 
 .menu-btn {
@@ -433,81 +434,97 @@ img:hover {
 }
 
 /* Explore Header Section */
-.explore {
+explore {
     width: 100%;
-    height: 80vh; /* Set height for the large background image */
-    background-image: url('images/m=nature.jpg');
+    height: 80vh;
+    background-image: url(images/m=nature.jpg);
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
-    justify-content: center;
-    color: whitesmoke;
 }
 
 .explore-content {
-    text-align: center;
-    max-width: 700px;
+    width: 50%;
+    padding: 50px;
+    color: whitesmoke;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .explore-content h1 {
-    font-size: 4rem;
-    font-weight: bold;
-    letter-spacing: 2px;
-    margin-bottom: 20px;
+    font-size: 7vmin;
+}
+
+.explore-content.line {
+    margin-bottom: 50px;
 }
 
 .explore-content p {
-    font-size: 1.5rem;
-    line-height: 1.6;
-    margin-bottom: 30px;
+    color: whitesmoke;
 }
 
-/* Line Under Header */
-.line {
-    width: 150px;
-    height: 4px;
-    background-color: crimson;
-    margin: 20px auto;
-    border-radius: 5px;
+.explore-content.ctn {
+    margin: 40px;
 }
 
-/* Section for Side-by-Side Images */
-.explore-destinations {
-    width: 90%;
-    margin: 80px auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two columns for side-by-side layout */
-    grid-gap: 30px; /* Gap between images */
+.content-col {
+    width: 40%;
 }
 
-.explore-destination img {
+.image-col {
+    width: 60%;
+}
+
+.tours.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
+    align-items: center;
 }
 
-.explore-destination img:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
+.image-gallery img {
+    width: 300px;
+    height: 200px;
+    margin: 5px;
 }
 
-/* Text Beneath Each Image */
-.explore-info {
+.content-col h1 {
+    font-size: 7vmin;
+    color: rgb(91, 91, 152);
+}
+
+.content-col line {
+    margin-left: -1px;
+}
+
+.content-col p {
+    padding: 0;
+    margin: 30px auto;
+}
+
+.ctn {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.footer {
+    width: 100%;
+    min-height: 200px;
+    padding: 20px 80px;
+    margin: 0;
+    background-color: rgb(91, 91, 152);
     text-align: center;
-    margin-top: 15px;
 }
 
-.explore-info h2 {
-    font-size: 1.8rem;
-    color: #5b5b98;
-    margin-bottom: 10px;
+.footer p {
+    color: whitesmoke;
+    margin: 20px auto;
+    padding: 20px;
 }
 
-.explore-info p {
-    font-size: 1.1rem;
-    color: #333;
-    line-height: 1.6;
-}
 
 /* Media Queries for Responsiveness */
 @media screen and (max-width: 768px) {
