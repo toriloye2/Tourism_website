@@ -41,23 +41,35 @@ body, html {
 }
 
 .nav-links a {
-    color:whitesmoke;
+    color: whitesmoke;
     text-decoration: none;
     padding: 10px 15px;
     border: 2px solid whitesmoke;
     border-radius: 5px;
     background-color: rgba(0, 0, 0, 0.3);
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    display: inline-block;
+    box-sizing: border-box;
 }
-.nav-links a:hover{
+
+/* Hover effect for all buttons */
+.nav-links a:hover {
     background-color: rgba(0, 0, 0, 0.5);
+    border-color: crimson;
+    color: crimson;
 }
 
-
+/* More refined active state */
 .active {
-    color: crimson;
-    /* text-decoration: underline; */
-    font-weight: bold;
+    background-color: whitesmoke; /* Invert background color */
+    color: crimson; /* Invert text color */
+    border: 2px solid crimson; /* Match the border with the text color */
+}
+
+.active:hover {
+    background-color: #FF6666; /* A bit lighter on hover */
+    border-color: #FF6666;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.3); /* Slightly more shadow on hover */
 }
 
 /* Mobile Menu */
@@ -133,8 +145,18 @@ header {
 .ctn {
     padding-left: 20px;
     padding-right: 20px;
+    color:whitesmoke;
+    background-color: crimson;
+    border-color: crimson;
+    border-radius: 10px;
+    text-decoration: none;
 }
+.ctn:hover{
+    background-color:#aa1122;
+    color:white;
 
+}
+/*
 .ctn a {
     background-color: crimson;
     border-color: crimson;
@@ -142,8 +164,8 @@ header {
 
 .ctn a:hover {
     background-color: whitesmoke;
-    color: crimson;
-}
+    color:crimson;
+} */
 
 
 /* Events Section */
@@ -468,6 +490,8 @@ explore {
 
 .explore-content.ctn {
     margin: 40px;
+    color:crimson
+
 }
 
 .content-col {
