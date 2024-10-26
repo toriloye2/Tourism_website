@@ -255,40 +255,58 @@ p {
 
 
 /* Tours Section */
+.tours {
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+/* Styling for the text content */
 .content-col {
-    width: 40%;
-}
-
-.image-col {
-    width: 60%;
-}
-
-.tours.image-gallery {
-    display: flex;
-    flex-wrap: wrap;
     width: 100%;
-    align-items: center;
-}
-
-.image-gallery img {
-    width: 300px;
-    height: 200px;
-    margin: 5px;
-}
-
-.content-col h1 {
-    font-size: 7vmin;
-    color: rgb(91, 91, 152);
-}
-
-.content-col line {
-    margin-left: -1px;
+    position: relative;
 }
 
 .content-col p {
-    padding: 0;
-    margin: 30px auto;
+    line-height: 1.8;
+    color: #333;
+    text-align: justify;
+    margin: 0 0 15px 0;
 }
+
+/* Wrapping images to the right */
+.image-gallery {
+    float: right;
+    width: 80%; /* Adjust width to control how much space the images take */
+    margin: 0 0 10px 15px; /* Spacing between the text and images */
+}
+
+.image-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.Highlights {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+    clear: both; /* Ensures the list appears below the floated images */
+}
+
+.Highlights li {
+    margin-bottom: 0.7rem;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.Highlights li i {
+    color: rgb(91, 91, 152);
+    margin-right: 8px;
+    font-size: 1.2rem;
+}
+
 
 /* Footer styles */
 .footer {
