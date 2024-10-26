@@ -143,13 +143,14 @@ header {
 
 
 .ctn {
-    padding-left: 20px;
-    padding-right: 20px;
-    color:whitesmoke;
+    display: inline-block;
+    padding: 10px 15px;
     background-color: crimson;
-    border-color: crimson;
-    border-radius: 10px;
+    color: #fff;
+    border-radius: 6px;
     text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
 }
 .ctn:hover{
     background-color:#aa1122;
@@ -306,6 +307,7 @@ p {
     margin-right: 8px;
     font-size: 1.2rem;
 }
+
 
 
 /* Footer styles */
@@ -593,4 +595,129 @@ explore {
     font-size: 1rem;
     color: #444;
     line-height: 1.5;
+}
+
+/* Tours Section */
+.tours1 {
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+/* Flexbox layout for the row */
+.row {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+/* Text column */
+.content-colu {
+    flex: 1;
+    padding: 10px;
+}
+
+.content-colu h1 {
+    font-size: 2rem;
+    color: rgb(91, 91, 152);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.content-colu .line {
+    width: 50px;
+    height: 4px;
+    background: #f05a5a;
+    margin: 0.5rem 0 1rem 0;
+}
+
+.content-colu p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+/* Button styling for the "More Info" link */
+.content-colu .ctn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: crimson;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.content-colu .ctn i {
+    margin-right: 5px;
+}
+
+.content-colu .ctn:hover {
+    background-color: #4e4e96;
+}
+
+/* Image column */
+.image-col {
+    flex: 1;
+}
+
+.image-galleryi {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns for images */
+    gap: 10px;
+}
+
+/* Individual images */
+.image-galleryi img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-galleryi img:hover {
+    transform: scale(1.05); /* Subtle zoom effect */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+    }
+    .image-galleryi {
+        grid-template-columns: 1fr; /* Single column for smaller screens */
+    }
+}
+/* Additional Mobile View Styles */
+@media (max-width: 600px) {
+    /* Center-align text for mobile */
+    .content-colu {
+        text-align: center;
+    }
+
+    .content-colu h1 {
+        font-size: 1.5rem; /* Smaller font size for title */
+    }
+
+    .content-colu p {
+        font-size: 0.9rem;
+    }
+
+    /* Adjust button size for mobile */
+    .content-colu .ctn {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+
+    /* Stack images in a single column for small screens */
+    .image-galleryi {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
 }
